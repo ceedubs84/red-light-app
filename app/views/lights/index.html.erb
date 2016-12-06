@@ -1,6 +1,12 @@
-<h1>Red Lights</h1>
-<% @lights.each do |light| %>
-  <h4>Camera ID: <%= light["camera_id"] %></h4>
-  <h4>Intersection: <%= light["intersection"] %></h4>
-  <h3 style="color:red"><bold>Violations: <%= light["violations"] %></bold></h3>
-<% end %>
+<h1 style="color:#ff0000">Red Lights</h1>
+  <% @lights.each do |light| %>
+    <div class="col-sm-4">
+      <div class="product_single">
+        <div class="product_single_image">
+          <h4>Camera ID: <%= light["camera_id"] %></h4>
+          <h4>Intersection: <%= light["intersection"] %></h4>
+          <h3 style="color:#ff0000"><bold>Violations: <%= light["violations"] %></bold></h3>
+        </div>
+      </div>
+    </div>
+  <% end %>
